@@ -1,0 +1,29 @@
+# Binarios compilados
+/qr-api
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Archivos de test
+*.test
+*.out
+
+# Carpeta de vendor (si no la versionas)
+vendor/
+
+# Variables de entorno (nunca subir esto)
+.env
+.env.*
+!.env.example
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
