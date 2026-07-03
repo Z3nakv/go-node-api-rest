@@ -8,12 +8,8 @@ import (
 type Matrix [][]float64
 
 var (
-	// ErrEmptyMatrix se retorna cuando la matriz de entrada no tiene filas o columnas.
 	ErrEmptyMatrix = errors.New("la matriz no puede estar vacía")
-	// ErrJaggedMatrix se retorna cuando las filas no tienen todas la misma longitud.
 	ErrJaggedMatrix = errors.New("todas las filas de la matriz deben tener la misma longitud")
-	// ErrNotEnoughRows se retorna cuando m < n, caso en el que la QR "completa"
-	// estándar no está definida de la forma clásica (se requiere m >= n).
 	ErrNotEnoughRows = errors.New("la factorización QR requiere que el número de filas (m) sea mayor o igual al número de columnas (n)")
 )
 

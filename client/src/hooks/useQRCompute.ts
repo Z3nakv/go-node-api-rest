@@ -7,12 +7,6 @@ interface ComputeParams {
   matrix: Matrix;
 }
 
-/**
- * Llama a POST /api/matrix/qr en qr-api.
- * Mantiene loading/error/data como estado local, sin librerías extra,
- * ya que esta pantalla no necesita cache ni revalidación (no es un
- * recurso que cambie fuera de esta acción del usuario).
- */
 export function useQrCompute() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

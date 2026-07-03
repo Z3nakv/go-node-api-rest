@@ -1,4 +1,5 @@
-import type { MatrixStats } from './types';
+import type { MatrixStats } from "../types";
+
 
 interface StatCardProps {
   name: string;

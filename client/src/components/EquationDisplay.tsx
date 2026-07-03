@@ -1,6 +1,6 @@
 
 import { BracketMatrix } from './BracketMatrix';
-import type { Matrix } from './types';
+import type { Matrix } from '../types';
 
 interface EquationDisplayProps {
   a: Matrix;

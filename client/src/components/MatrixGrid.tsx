@@ -1,4 +1,5 @@
-import type { Matrix } from './types';
+import type { Matrix } from "../types";
+
 
 interface MatrixGridProps {
   rows: number;

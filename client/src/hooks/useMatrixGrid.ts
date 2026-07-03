@@ -14,11 +14,6 @@ const SAMPLE_VALUES: Matrix = [
   [1, 1, 1],
 ];
 
-/**
- * Maneja las dimensiones y valores de la matriz de entrada (A).
- * Misma lógica que el prototipo en HTML: al cambiar filas/columnas,
- * se reconstruye la matriz preservando los valores que ya existían.
- */
 export function useMatrixGrid() {
   const [rows, setRows] = useState(3);
   const [cols, setCols] = useState(2);

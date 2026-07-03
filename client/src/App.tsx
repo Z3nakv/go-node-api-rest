@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { MatrixGrid } from "./MatrixGrid";
-import { EquationDisplay } from "./EquationDisplay";
-import { StatCard } from "./StatCard";
+import { EquationDisplay } from "./components/EquationDisplay";
 import { useMatrixGrid } from "./hooks/useMatrixGrid";
 import { useQrCompute } from "./hooks/useQRCompute";
+import { MatrixGrid } from "./components/MatrixGrid";
+import { StatCard } from "./components/StatCard";
 
 
 const DEFAULT_API_URL = import.meta.env.VITE_QR_API_URL ?? 'http://localhost:8080';

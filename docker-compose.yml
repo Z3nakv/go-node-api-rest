@@ -1,13 +1,5 @@
 version: "3.9"
 
-# Orquesta las dos APIs del desafío:
-#   - qr-api    (Go / Fiber)   -> expone :8080, calcula la factorización QR
-#   - stats-api (Node / Express) -> expone :3000, calcula estadísticas sobre Q y R
-#
-# qr-api le habla a stats-api por la red interna de Docker usando el nombre
-# del servicio ("stats-api") como hostname, sin necesidad de exponer puertos
-# públicos adicionales para esa comunicación interna.
-
 services:
   stats-api:
     build:

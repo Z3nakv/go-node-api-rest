@@ -23,7 +23,7 @@ function assertValidMatrix(matrix: number[][]): void {
 function isDiagonalMatrix(matrix: number[][], epsilon: number = 1e-9): boolean {
   const rows = matrix.length;
   const cols = matrix[0].length;
-  if (rows !== cols) return false; // sólo una matriz cuadrada puede ser diagonal
+  if (rows !== cols) return false; 
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
@@ -83,8 +83,6 @@ function computeCombinedStats(matrices: number[][][]): any {
     min,
     average: count > 0 ? sum / count : 0,
     sum,
-    // El concepto de "diagonal" no aplica a un conjunto combinado de
-    // matrices, sólo a una matriz individual.
     isDiagonal: false,
   };
 }

@@ -13,7 +13,6 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
-// MatrixRequest representa el body esperado por POST /api/matrix/qr
 type MatrixRequest struct {
 	Matrix [][]float64 `json:"matrix"`
 }
@@ -56,8 +55,6 @@ func main() {
 			})
 		}
 
-		// Por ahora solo devolvemos lo que recibimos, para confirmar
-		// que el parseo funciona. Acá después va la lógica de QR.
 		return c.JSON(fiber.Map{
 			"received": req.Matrix,
 			"rows":     len(req.Matrix),

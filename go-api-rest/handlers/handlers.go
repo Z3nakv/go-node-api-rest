@@ -49,11 +49,6 @@ func (h *Handler) PostMatrixQR(c *fiber.Ctx) error {
 
 	stats, err := h.StatsClient.FetchStats(c.Context(), q, r)
 	if err != nil {
-		// La factorización SÍ se calculó correctamente; el problema fue en la
-		// comunicación con el servicio downstream. Se informa con 502 Bad
-		// Gateway, que es semánticamente correcto para fallos de servicios
-		// dependientes, y se incluye igualmente Q y R para no perder trabajo
-		// ya realizado.
 		return c.Status(fiber.StatusBadGateway).JSON(fiber.Map{
 			"error": "no se pudo obtener estadísticas de node-api: " + err.Error(),
 			"q":     q,
